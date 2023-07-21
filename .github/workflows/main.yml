@@ -8,7 +8,8 @@ jobs:
     - uses: actions/checkout@master
     - run: |
           ls
-          jar cvf sample.war *.*
+          mv target/MSPR-LuminaLink-1.0-SNAPSHOT.war sample.war
+#          jar cvf sample.war *.*
     - name: copy file via ssh password
       uses: appleboy/scp-action@master
       with:
